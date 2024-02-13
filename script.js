@@ -16,9 +16,20 @@ let show5 = document.createElement("img")
 show1.src = photos[0];
 // 1. Update the src for each variable - use the line above as a reference.
 
+let listOfImgElements = [show1, show2, show3, show4, show5]
 
 
-body.appendChild(show1);
+listOfImgElements.forEach((element, i) => {
+  element.src = photos[i];
+  console.log(element);
+})
+
+
+
+// body.appendChild(show1);
 // 2. Append each show to the body - use the line above as a reference.
 
-
+listOfImgElements.forEach((element) => {
+  body.appendChild(element);
+  console.log("Appending a child");
+});
